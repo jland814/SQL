@@ -1,0 +1,15 @@
+--Create a bookstore database
+CREATE TABLE store (id INTEGER PRIMARY KEY, item_name TEXT, quantity INTEGER, aisle INTEGER, price INTEGER);
+
+INSERT INTO store VALUES(1, "hardcover_book", 5, 1, 17.99);
+INSERT INTO store Values(2, "softcover_book", 3,2, 14.99);
+INSERT INTO store Values(3, "picture_book", 14, 3, 12.99);
+INSERT INTO store Values(4, "ya_book", 23, 4, 13.99);
+INSERT INTO store Values(5, "graphic_novels", 21, 5, 16.99);
+SELECT * FROM store;
+
+-display the database ordered by price.
+SELECT * FROM store ORDER BY price;
+
+-display the sum of items within the store.
+SELECT SUM(quantity) FROM store;
